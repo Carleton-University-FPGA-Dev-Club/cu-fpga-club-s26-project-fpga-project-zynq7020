@@ -71,3 +71,6 @@ xvlog.*
 
 ## checkpoint files
 *.dcp
+
+test_scripts/
+.slang/*
