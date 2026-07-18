@@ -9,3 +9,4 @@ hw/rtl/disp/video_out_adapter.v
 hw/rtl/gen/test_image_gen_bd.v
 hw/rtl/proc/passthrough_bd.v
 hw/rtl/gen/reset_sync.v
+hw/rtl/top.sv

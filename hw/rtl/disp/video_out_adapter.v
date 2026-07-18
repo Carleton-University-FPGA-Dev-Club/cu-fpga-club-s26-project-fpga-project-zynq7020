@@ -29,7 +29,7 @@ always @(posedge clk) begin
 
     end
     else begin
-        vid_pData <= {in_r, in_b, in_g};
+        vid_pData <= {in_r, in_g, in_b};
 
         vid_pVDE <= in_pixel_valid;
         vid_pHsync <= in_hsync;
