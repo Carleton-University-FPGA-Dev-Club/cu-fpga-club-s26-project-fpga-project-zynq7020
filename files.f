@@ -5,3 +5,7 @@ hw/rtl/pipeline_top.sv
 hw/rtl/gen/test_image_gen.sv
 hw/rtl/gen/timing_gen.sv
 hw/rtl/disp/rgb_led_driver.sv
+hw/rtl/disp/video_out_adapter.v
+hw/rtl/gen/test_image_gen_bd.v
+hw/rtl/proc/passthrough_bd.v
+hw/rtl/gen/reset_sync.v

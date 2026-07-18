@@ -4,6 +4,7 @@ import img_pipe_pkg::*;
 module test_image_gen (
     input logic clk,
     input logic rst_n,
+    input logic sw,
 
     output pixel_bus_t out
 );
@@ -22,7 +23,7 @@ module test_image_gen (
     );
 
     pixel_t pattern_pixel;
-    logic pattern = 1'd0;
+    logic pattern = sw;
     always_comb begin
         case (pattern)
             1'd0: begin
@@ -30,6 +31,11 @@ module test_image_gen (
                 pattern_pixel.r = x[9:2];//pattern_pixel.r = x[9:2];
                 pattern_pixel.g = y[9:2];//pattern_pixel.g = y[9:2];
                 pattern_pixel.b = 8'h40;
+            end
+            1'd1: begin
+                pattern_pixel.r = x[9:2];//pattern_pixel.r = x[9:2];
+                pattern_pixel.g = y[9:2];//pattern_pixel.g = y[9:2];
+                pattern_pixel.b = 8'hFF;
             end
             default: begin
                 pattern_pixel = '{r:8'h00, g:8'h00, b:8'h00};
